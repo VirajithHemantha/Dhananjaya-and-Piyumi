@@ -22,10 +22,10 @@ export const Hero: React.FC = () => {
         style={{ y: y1, scale }}
       >
         <img
-          src="/1.jpg"
+          src="/z.jpg"
           alt="Dananjaya and Piyumi"
           className="w-full h-full object-cover opacity-85"
-          style={{ objectPosition: 'center 15%' }}
+          style={{ objectPosition: 'center 35%' }}
         />
         {/* Soft elegant gradient overlays to ensure text readability & premium feel */}
         <div className="absolute inset-0 bg-gradient-to-t from-brand-ivory via-brand-ivory/50 to-brand-ivory/80" />
