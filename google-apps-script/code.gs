@@ -1,111 +1,138 @@
-const SPREADSHEET_ID = '1jMa12xeTFbfdR5s3NAnYyQT8izPZ-8GAx82X_5i04EE';
+/**
+ * Dananjaya & Piyumi — Wedding RSVP + Wishes backend (Google Apps Script)
+ *
+ * Paste this whole file into Extensions > Apps Script (Code.gs) of the sheet:
+ * https://docs.google.com/spreadsheets/d/1LRhD2IS1fR4EFExsZVbLh58Btq-9aj5hoUTSFwsdXsE/edit
+ *
+ * The "RSVP" and "Wishes" sheets (with styled headers) are created automatically
+ * on the first submission, or right away by running setup() once from the editor.
+ *
+ * Endpoints (deploy as Web app, Execute as: Me, Who has access: Anyone):
+ *   POST  sheet=RSVP   name, attendance, guests, dietary
+ *   POST  sheet=Wishes name, message
+ *   GET   ?action=wishes   -> latest wishes as JSON (shown on the invitation)
+ */
 
-function doPost(e) {
-  try {
-    const payload = parsePayload_(e);
-    const sheetKey = String(payload.sheet || '').toUpperCase();
+var SPREADSHEET_ID = '1LRhD2IS1fR4EFExsZVbLh58Btq-9aj5hoUTSFwsdXsE';
 
-    if (sheetKey !== 'RSVP' && sheetKey !== 'WISH') {
-      return jsonResponse_({ ok: false, error: 'Invalid sheet. Use RSVP or WISH.' });
-    }
+var SHEETS = {
+  RSVP: {
+    headers: ['Timestamp', 'Full Name', 'Attendance', 'Guests', 'Dietary Notes'],
+    fields: ['name', 'attendance', 'guests', 'dietary'],
+    widths: [170, 220, 120, 80, 320],
+  },
+  Wishes: {
+    headers: ['Timestamp', 'Guest Name', 'Message'],
+    fields: ['name', 'message'],
+    widths: [170, 220, 480],
+  },
+};
 
-    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
-    const sheet = getOrCreateSheet_(ss, sheetKey);
+var HEADER_BG = '#722F37';
+var HEADER_FG = '#FFFFFF';
+var MAX_FIELD_LENGTH = 2000;
+var WISHES_LIMIT = 50;
 
-    if (sheetKey === 'RSVP') {
-      ensureHeaders_(sheet, ['Timestamp', 'Name', 'Phone', 'Guests', 'Attendance', 'DietaryRestrictions']);
-      sheet.appendRow([
-        new Date(),
-        payload.name || '',
-        payload.phone || payload.email || '',
-        payload.guests || '',
-        payload.attendance || '',
-        payload.dietaryRestrictions || '',
-      ]);
-    } else {
-      ensureHeaders_(sheet, ['Timestamp', 'Name', 'Message']);
-      sheet.appendRow([
-        new Date(),
-        payload.name || '',
-        payload.message || '',
-      ]);
-    }
-
-    return jsonResponse_({ ok: true });
-  } catch (error) {
-    return jsonResponse_({
-      ok: false,
-      error: String(error && error.message ? error.message : error),
-    });
-  }
+function getSpreadsheet_() {
+  return SpreadsheetApp.openById(SPREADSHEET_ID);
 }
 
-function doGet() {
-  return jsonResponse_({
-    ok: true,
-    message: 'Wedding form endpoint is running.',
-  });
-}
+/** Returns the sheet, creating it (and its header row) if missing or empty. */
+function getOrCreateSheet_(name) {
+  var config = SHEETS[name];
+  if (!config) throw new Error('Unknown sheet: ' + name);
 
-function parsePayload_(e) {
-  const params = e && e.parameter ? e.parameter : {};
+  var ss = getSpreadsheet_();
+  var sheet = ss.getSheetByName(name) || ss.insertSheet(name);
 
-  if (Object.keys(params).length > 0) {
-    return params;
-  }
-
-  const contents = e && e.postData && e.postData.contents ? e.postData.contents : '';
-  if (!contents) {
-    return {};
-  }
-
-  if (contents.indexOf('=') !== -1 && contents.indexOf('{') !== 0) {
-    return parseQueryString_(contents);
-  }
-
-  try {
-    return JSON.parse(contents);
-  } catch (_error) {
-    return {};
-  }
-}
-
-function parseQueryString_(query) {
-  const out = {};
-  const pairs = String(query).split('&');
-
-  for (let i = 0; i < pairs.length; i++) {
-    const part = pairs[i];
-    if (!part) continue;
-
-    const idx = part.indexOf('=');
-    const rawKey = idx >= 0 ? part.slice(0, idx) : part;
-    const rawValue = idx >= 0 ? part.slice(idx + 1) : '';
-    const key = decodeURIComponent(rawKey.replace(/\+/g, ' '));
-    const value = decodeURIComponent(rawValue.replace(/\+/g, ' '));
-
-    out[key] = value;
-  }
-
-  return out;
-}
-
-function getOrCreateSheet_(ss, name) {
-  let sheet = ss.getSheetByName(name);
-  if (!sheet) {
-    sheet = ss.insertSheet(name);
+  if (sheet.getLastRow() === 0) {
+    var header = sheet.getRange(1, 1, 1, config.headers.length);
+    header.setValues([config.headers])
+      .setFontWeight('bold')
+      .setFontColor(HEADER_FG)
+      .setBackground(HEADER_BG)
+      .setHorizontalAlignment('center');
+    sheet.setFrozenRows(1);
+    config.widths.forEach(function (w, i) { sheet.setColumnWidth(i + 1, w); });
+    sheet.getRange(2, 1, sheet.getMaxRows() - 1, 1).setNumberFormat('yyyy-mm-dd hh:mm:ss');
   }
   return sheet;
 }
 
-function ensureHeaders_(sheet, headers) {
-  if (sheet.getLastRow() === 0) {
-    sheet.appendRow(headers);
+/** Run once from the Apps Script editor to create both sheets immediately. */
+function setup() {
+  Object.keys(SHEETS).forEach(getOrCreateSheet_);
+}
+
+function clean_(value) {
+  var text = String(value == null ? '' : value).trim().slice(0, MAX_FIELD_LENGTH);
+  // Stop values like "=HYPERLINK(...)" from being run as spreadsheet formulas
+  return /^[=+\-@]/.test(text) ? "'" + text : text;
+}
+
+function json_(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function readParams_(e) {
+  var params = (e && e.parameter) ? e.parameter : {};
+  // Also accept a JSON body
+  if (e && e.postData && e.postData.type === 'application/json') {
+    try {
+      var body = JSON.parse(e.postData.contents);
+      for (var k in body) params[k] = body[k];
+    } catch (err) { /* ignore malformed JSON */ }
+  }
+  return params;
+}
+
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(10000);
+
+    var params = readParams_(e);
+    var name = params.sheet === 'Wishes' ? 'Wishes' : (params.sheet === 'RSVP' ? 'RSVP' : null);
+    if (!name) return json_({ result: 'error', error: 'Missing or unknown "sheet" parameter' });
+    if (!clean_(params.name)) return json_({ result: 'error', error: 'Name is required' });
+
+    var sheet = getOrCreateSheet_(name);
+    var row = [new Date()].concat(SHEETS[name].fields.map(function (f) { return clean_(params[f]); }));
+    sheet.appendRow(row);
+
+    return json_({ result: 'success', sheet: name, row: sheet.getLastRow() });
+  } catch (error) {
+    return json_({ result: 'error', error: String(error) });
+  } finally {
+    lock.releaseLock();
   }
 }
 
-function jsonResponse_(data) {
-  return ContentService
-    .createTextOutput(JSON.stringify(data))
-    .setMimeType(ContentService.MimeType.JSON);
+function doGet(e) {
+  try {
+    var action = e && e.parameter ? e.parameter.action : '';
+    if (action !== 'wishes') return json_({ result: 'ok', message: 'Dananjaya & Piyumi wedding API' });
+
+    var sheet = getOrCreateSheet_('Wishes');
+    var last = sheet.getLastRow();
+    if (last < 2) return json_({ result: 'success', wishes: [] });
+
+    var count = Math.min(WISHES_LIMIT, last - 1);
+    var rows = sheet.getRange(last - count + 1, 1, count, 3).getValues();
+    var wishes = rows
+      .filter(function (r) { return r[1] && r[2]; })
+      .map(function (r) {
+        return {
+          name: String(r[1]).replace(/^'/, ''),
+          message: String(r[2]).replace(/^'/, ''),
+          createdAt: r[0] instanceof Date ? r[0].toISOString() : String(r[0]),
+        };
+      })
+      .reverse(); // newest first
+
+    return json_({ result: 'success', wishes: wishes });
+  } catch (error) {
+    return json_({ result: 'error', error: String(error) });
+  }
 }

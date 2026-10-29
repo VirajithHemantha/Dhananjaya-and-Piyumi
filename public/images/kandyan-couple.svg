@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+<title>Kandyan wedding couple illustration</title>
+<defs>
+  <radialGradient id="halo" cx="50%" cy="38%" r="55%">
+    <stop offset="0" stop-color="#F3E5AB" stop-opacity=".9"/>
+    <stop offset=".6" stop-color="#F4EAD5" stop-opacity=".6"/>
+    <stop offset="1" stop-color="#FBF6EC"/>
+  </radialGradient>
+</defs>
+<rect width="600" height="800" fill="url(#halo)"/>
+<circle cx="300" cy="300" r="230" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity=".45"/>
+<circle cx="300" cy="300" r="250" fill="none" stroke="#D4AF37" stroke-width="1" opacity=".3" stroke-dasharray="4 8"/>
+<circle opacity=".45" cx="47.2" cy="130.7" r="2" fill="#D4AF37"/><circle opacity=".45" cx="161.6" cy="126.8" r="2" fill="#D4AF37"/><circle opacity=".45" cx="406.8" cy="184.7" r="2" fill="#D4AF37"/><circle opacity=".45" cx="291.9" cy="418.5" r="2" fill="#D4AF37"/><circle opacity=".45" cx="487.5" cy="86.7" r="2" fill="#D4AF37"/><circle opacity=".45" cx="274.7" cy="438.9" r="2" fill="#D4AF37"/><circle opacity=".45" cx="406.9" cy="282.5" r="2" fill="#D4AF37"/><circle opacity=".45" cx="186" cy="229.4" r="2" fill="#D4AF37"/><circle opacity=".45" cx="510.7" cy="82.5" r="2" fill="#D4AF37"/><circle opacity=".45" cx="579" cy="282.6" r="2" fill="#D4AF37"/><circle opacity=".45" cx="563.8" cy="274.8" r="2" fill="#D4AF37"/><circle opacity=".45" cx="181.5" cy="95.5" r="2" fill="#D4AF37"/><circle opacity=".45" cx="434.8" cy="138.8" r="2" fill="#D4AF37"/><circle opacity=".45" cx="127.4" cy="363" r="2" fill="#D4AF37"/><circle opacity=".45" cx="33.9" cy="198" r="2" fill="#D4AF37"/><circle opacity=".45" cx="160.9" cy="411.1" r="2" fill="#D4AF37"/><circle opacity=".45" cx="183.7" cy="214" r="2" fill="#D4AF37"/><circle opacity=".45" cx="254.3" cy="109.9" r="2" fill="#D4AF37"/><circle opacity=".45" cx="504.1" cy="399.5" r="2" fill="#D4AF37"/><circle opacity=".45" cx="359.3" cy="387.8" r="2" fill="#D4AF37"/><circle opacity=".45" cx="469.6" cy="391.3" r="2" fill="#D4AF37"/><circle opacity=".45" cx="531" cy="244" r="2" fill="#D4AF37"/><circle opacity=".45" cx="280.7" cy="184.4" r="2" fill="#D4AF37"/><circle opacity=".45" cx="306.4" cy="342.1" r="2" fill="#D4AF37"/><circle opacity=".45" cx="428.3" cy="84.6" r="2" fill="#D4AF37"/><circle opacity=".45" cx="134.8" cy="163.7" r="2" fill="#D4AF37"/><circle opacity=".45" cx="511.3" cy="102.4" r="2" fill="#D4AF37"/><circle opacity=".45" cx="382.6" cy="61.4" r="2" fill="#D4AF37"/><circle opacity=".45" cx="108.1" cy="45.8" r="2" fill="#D4AF37"/><circle opacity=".45" cx="151" cy="232.1" r="2" fill="#D4AF37"/><circle opacity=".45" cx="20.6" cy="314.2" r="2" fill="#D4AF37"/><circle opacity=".45" cx="387.3" cy="390.7" r="2" fill="#D4AF37"/><circle opacity=".45" cx="532.2" cy="31.2" r="2" fill="#D4AF37"/><circle opacity=".45" cx="88.9" cy="143.2" r="2" fill="#D4AF37"/><circle opacity=".45" cx="39.1" cy="78.4" r="2" fill="#D4AF37"/><circle opacity=".45" cx="161.6" cy="59.8" r="2" fill="#D4AF37"/><circle opacity=".45" cx="214.4" cy="108.3" r="2" fill="#D4AF37"/><circle opacity=".45" cx="370.2" cy="88.8" r="2" fill="#D4AF37"/><circle opacity=".45" cx="345.8" cy="37.9" r="2" fill="#D4AF37"/><circle opacity=".45" cx="23.5" cy="349.4" r="2" fill="#D4AF37"/>
+<ellipse cx="300" cy="752" rx="220" ry="16" fill="#4E1C24" opacity=".12"/>
+<g id="couple">
+<g id="groom">
+  <!-- lower mul anduma cloth -->
+  <path d="M176 516 L166 742 L284 742 L274 516 Z" fill="#FBF6EC" stroke="#B08A1E" stroke-width="1.2"/>
+  <path d="M166 724 L284 724 L284 742 L166 742 Z" fill="#D4AF37"/>
+  <path d="M166 716 L284 716" stroke="#722F37" stroke-width="3"/>
+  <path d="M225 520 L222 716" stroke="#B08A1E" stroke-width="1" opacity=".5"/>
+  <path d="M200 520 L192 716 M250 520 L256 716" stroke="#B08A1E" stroke-width=".8" opacity=".35"/>
+  <!-- feet -->
+  <ellipse cx="196" cy="748" rx="20" ry="7" fill="#4E1C24"/>
+  <ellipse cx="254" cy="748" rx="20" ry="7" fill="#4E1C24"/>
+  <!-- left arm (viewer left) -->
+  <path d="M168 262 C150 300 146 350 150 398 L172 398 C172 352 178 310 190 276 Z" fill="#FBF6EC" stroke="#B08A1E" stroke-width="1.2"/>
+  <path d="M148 386 L174 386 L173 398 L150 398 Z" fill="#D4AF37"/>
+  <ellipse cx="160" cy="410" rx="11" ry="14" fill="#B97A56"/>
+  <!-- puffy pachchavadama waist cloth -->
+  <path d="M180 384 C126 404 122 500 168 522 L282 522 C328 500 324 404 270 384 Z" fill="#722F37"/>
+  <path d="M168 522 L282 522" stroke="#D4AF37" stroke-width="5"/>
+  <path d="M150 430 C190 446 260 446 300 430" stroke="#D4AF37" stroke-width="2" fill="none"/>
+  <path d="M142 470 C190 490 260 490 308 470" stroke="#D4AF37" stroke-width="2" fill="none"/>
+  <path d="M152 505 C190 516 260 516 298 505" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity=".8"/>
+  <circle cx="223.5" cy="461.2" r="1.6" fill="#D4AF37"/><circle cx="163.5" cy="423.8" r="1.6" fill="#D4AF37"/><circle cx="215.9" cy="454.8" r="1.6" fill="#D4AF37"/><circle cx="157.6" cy="498.7" r="1.6" fill="#D4AF37"/><circle cx="239.3" cy="443.5" r="1.6" fill="#D4AF37"/><circle cx="190.5" cy="487.2" r="1.6" fill="#D4AF37"/><circle cx="250.2" cy="404" r="1.6" fill="#D4AF37"/><circle cx="224.8" cy="422.7" r="1.6" fill="#D4AF37"/><circle cx="252.5" cy="413.6" r="1.6" fill="#D4AF37"/><circle cx="234.7" cy="452.5" r="1.6" fill="#D4AF37"/><circle cx="173.2" cy="400.9" r="1.6" fill="#D4AF37"/><circle cx="295.3" cy="509.4" r="1.6" fill="#D4AF37"/><circle cx="164.3" cy="447.4" r="1.6" fill="#D4AF37"/><circle cx="297.9" cy="417.3" r="1.6" fill="#D4AF37"/><circle cx="212.1" cy="459.9" r="1.6" fill="#D4AF37"/><circle cx="252.5" cy="428.1" r="1.6" fill="#D4AF37"/><circle cx="172.3" cy="511.3" r="1.6" fill="#D4AF37"/><circle cx="216.3" cy="422.4" r="1.6" fill="#D4AF37"/><circle cx="232.5" cy="434" r="1.6" fill="#D4AF37"/><circle cx="169.6" cy="486.2" r="1.6" fill="#D4AF37"/><circle cx="201.3" cy="436.3" r="1.6" fill="#D4AF37"/><circle cx="157.7" cy="504.3" r="1.6" fill="#D4AF37"/><circle cx="183.2" cy="499.3" r="1.6" fill="#D4AF37"/><circle cx="220.3" cy="422.9" r="1.6" fill="#D4AF37"/><circle cx="241.5" cy="442.4" r="1.6" fill="#D4AF37"/><circle cx="266.4" cy="472" r="1.6" fill="#D4AF37"/>
+  <!-- jacket torso -->
+  <path d="M186 238 L264 238 L274 386 L176 386 Z" fill="#FBF6EC" stroke="#B08A1E" stroke-width="1.2"/>
+  <path d="M225 240 L225 384" stroke="#D4AF37" stroke-width="3"/>
+  <circle cx="225" cy="262" r="3.2" fill="#D4AF37"/><circle cx="225" cy="290" r="3.2" fill="#D4AF37"/><circle cx="225" cy="318" r="3.2" fill="#D4AF37"/><circle cx="225" cy="346" r="3.2" fill="#D4AF37"/>
+  <path d="M196 250 C206 300 204 340 198 380 M254 250 C244 300 246 340 252 380" stroke="#D4AF37" stroke-width="1.6" fill="none"/>
+  <path d="M206 244 L225 268 L244 244" stroke="#D4AF37" stroke-width="2" fill="none"/>
+  <!-- gold belt -->
+  <rect x="174" y="374" width="102" height="16" rx="3" fill="#D4AF37"/>
+  <rect x="214" y="371" width="22" height="22" rx="4" fill="#B08A1E"/>
+  <circle cx="225" cy="382" r="5" fill="#722F37"/>
+  <!-- right arm reaching to bride -->
+  <path d="M276 262 C298 300 306 360 304 412 L284 414 C284 364 276 316 262 280 Z" fill="#FBF6EC" stroke="#B08A1E" stroke-width="1.2"/>
+  <path d="M283 402 L305 400 L305 414 L284 416 Z" fill="#D4AF37"/>
+  <!-- puffed shoulders -->
+  <ellipse cx="180" cy="256" rx="26" ry="22" fill="#FBF6EC" stroke="#B08A1E" stroke-width="1.2"/>
+  <ellipse cx="270" cy="256" rx="26" ry="22" fill="#FBF6EC" stroke="#B08A1E" stroke-width="1.2"/>
+  <path d="M160 252 C172 240 188 240 200 252 M250 252 C262 240 278 240 290 252" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+  <circle cx="172" cy="262" r="2" fill="#D4AF37"/><circle cx="184" cy="266" r="2" fill="#D4AF37"/><circle cx="196" cy="262" r="2" fill="#D4AF37"/><circle cx="262" cy="262" r="2" fill="#D4AF37"/><circle cx="274" cy="266" r="2" fill="#D4AF37"/><circle cx="286" cy="262" r="2" fill="#D4AF37"/>
+  <!-- neck + collar -->
+  <rect x="212" y="208" width="26" height="32" fill="#9E6444"/>
+  <path d="M206 236 L225 252 L244 236 L244 230 L206 230 Z" fill="#D4AF37"/>
+  <!-- head -->
+  <ellipse cx="225" cy="176" rx="33" ry="41" fill="#B97A56"/>
+  <ellipse cx="192" cy="182" rx="6" ry="10" fill="#9E6444"/>
+  <path d="M193 160 C190 190 198 196 196 206 L190 200 C186 186 186 168 193 160 Z M257 160 C260 190 252 196 254 206 L260 200 C264 186 264 168 257 160 Z" fill="#2A1A14"/>
+  <!-- Kandyan thoppiya hat -->
+  <path d="M186 152 L180 104 L196 86 L210 104 L225 70 L240 104 L254 86 L270 104 L264 152 Z" fill="#D4AF37" stroke="#B08A1E" stroke-width="1.5"/>
+  <rect x="184" y="138" width="82" height="15" rx="3" fill="#722F37"/>
+  <circle cx="196" cy="145.5" r="2.6" fill="#F3E5AB"/><circle cx="210" cy="145.5" r="2.6" fill="#F3E5AB"/><circle cx="225" cy="145.5" r="2.6" fill="#F3E5AB"/><circle cx="240" cy="145.5" r="2.6" fill="#F3E5AB"/><circle cx="254" cy="145.5" r="2.6" fill="#F3E5AB"/>
+  <path d="M190 128 L260 128" stroke="#B08A1E" stroke-width="1.5"/>
+  <path d="M196 120 L196 100 M225 120 L225 88 M254 120 L254 100" stroke="#B08A1E" stroke-width="1"/>
+  <circle cx="225" cy="64" r="7" fill="#D4AF37" stroke="#B08A1E" stroke-width="1.2"/>
+  <circle cx="196" cy="83" r="3.5" fill="#D4AF37"/><circle cx="254" cy="83" r="3.5" fill="#D4AF37"/>
+</g>
+<g id="bride">
+  <!-- osariya skirt -->
+  <path d="M342 398 C330 520 316 650 300 744 L472 744 C458 650 444 520 432 398 Z" fill="#722F37"/>
+  <path d="M302 728 L470 728 L472 744 L300 744 Z" fill="#D4AF37"/>
+  <path d="M304 718 L468 718" stroke="#097969" stroke-width="2.5"/>
+  <circle cx="364.3" cy="483" r="1.8" fill="#D4AF37"/><circle cx="448.7" cy="531.3" r="1.8" fill="#D4AF37"/><circle cx="410.1" cy="493.5" r="1.8" fill="#D4AF37"/><circle cx="452.7" cy="544.8" r="1.8" fill="#D4AF37"/><circle cx="370.7" cy="560" r="1.8" fill="#D4AF37"/><circle cx="451" cy="628.7" r="1.8" fill="#D4AF37"/><circle cx="368.7" cy="603.9" r="1.8" fill="#D4AF37"/><circle cx="415.9" cy="424.9" r="1.8" fill="#D4AF37"/><circle cx="443.9" cy="632.3" r="1.8" fill="#D4AF37"/><circle cx="438.9" cy="467" r="1.8" fill="#D4AF37"/><circle cx="350.9" cy="512.7" r="1.8" fill="#D4AF37"/><circle cx="435.5" cy="601" r="1.8" fill="#D4AF37"/><circle cx="430.1" cy="520.8" r="1.8" fill="#D4AF37"/><circle cx="362.4" cy="630" r="1.8" fill="#D4AF37"/><circle cx="332.5" cy="631.5" r="1.8" fill="#D4AF37"/><circle cx="388.9" cy="571.8" r="1.8" fill="#D4AF37"/><circle cx="357" cy="583.5" r="1.8" fill="#D4AF37"/><circle cx="321.5" cy="530.4" r="1.8" fill="#D4AF37"/><circle cx="361.9" cy="426.9" r="1.8" fill="#D4AF37"/><circle cx="381.4" cy="469.9" r="1.8" fill="#D4AF37"/><circle cx="449.2" cy="684.4" r="1.8" fill="#D4AF37"/><circle cx="395.8" cy="472.6" r="1.8" fill="#D4AF37"/><circle cx="342.3" cy="675.8" r="1.8" fill="#D4AF37"/><circle cx="342.3" cy="610.2" r="1.8" fill="#D4AF37"/><circle cx="397.4" cy="515.6" r="1.8" fill="#D4AF37"/><circle cx="426.4" cy="427.9" r="1.8" fill="#D4AF37"/><circle cx="327.4" cy="694.4" r="1.8" fill="#D4AF37"/><circle cx="413.2" cy="652.6" r="1.8" fill="#D4AF37"/><circle cx="400.3" cy="692.9" r="1.8" fill="#D4AF37"/><circle cx="451.2" cy="453.6" r="1.8" fill="#D4AF37"/><circle cx="349.9" cy="690.3" r="1.8" fill="#D4AF37"/><circle cx="450.7" cy="697.4" r="1.8" fill="#D4AF37"/><circle cx="340.4" cy="564.7" r="1.8" fill="#D4AF37"/><circle cx="394.2" cy="435.2" r="1.8" fill="#D4AF37"/><circle cx="344.2" cy="538.2" r="1.8" fill="#D4AF37"/><circle cx="321.6" cy="544.1" r="1.8" fill="#D4AF37"/><circle cx="452.8" cy="564.2" r="1.8" fill="#D4AF37"/><circle cx="407.5" cy="601.8" r="1.8" fill="#D4AF37"/><circle cx="441.6" cy="488.7" r="1.8" fill="#D4AF37"/><circle cx="432.3" cy="593.7" r="1.8" fill="#D4AF37"/><circle cx="407.3" cy="694.9" r="1.8" fill="#D4AF37"/><circle cx="326.9" cy="495" r="1.8" fill="#D4AF37"/><circle cx="379.4" cy="620.6" r="1.8" fill="#D4AF37"/><circle cx="390.3" cy="624.2" r="1.8" fill="#D4AF37"/><circle cx="444.2" cy="659.8" r="1.8" fill="#D4AF37"/><circle cx="340.7" cy="451.5" r="1.8" fill="#D4AF37"/><circle cx="403" cy="486.5" r="1.8" fill="#D4AF37"/><circle cx="420.3" cy="499.6" r="1.8" fill="#D4AF37"/><circle cx="363" cy="473.1" r="1.8" fill="#D4AF37"/><circle cx="352.3" cy="668.2" r="1.8" fill="#D4AF37"/><circle cx="441.7" cy="691.2" r="1.8" fill="#D4AF37"/><circle cx="352.9" cy="491.9" r="1.8" fill="#D4AF37"/><circle cx="424.7" cy="686.2" r="1.8" fill="#D4AF37"/><circle cx="415.1" cy="461.2" r="1.8" fill="#D4AF37"/><circle cx="357" cy="604.7" r="1.8" fill="#D4AF37"/><circle cx="386.9" cy="637" r="1.8" fill="#D4AF37"/><circle cx="387.3" cy="486.3" r="1.8" fill="#D4AF37"/><circle cx="422.1" cy="618.2" r="1.8" fill="#D4AF37"/><circle cx="425.6" cy="617.3" r="1.8" fill="#D4AF37"/><circle cx="404.8" cy="573.2" r="1.8" fill="#D4AF37"/><circle cx="454.7" cy="629" r="1.8" fill="#D4AF37"/><circle cx="447.4" cy="433.9" r="1.8" fill="#D4AF37"/><circle cx="374.4" cy="528.5" r="1.8" fill="#D4AF37"/><circle cx="361.6" cy="443.8" r="1.8" fill="#D4AF37"/><circle cx="359.1" cy="473.3" r="1.8" fill="#D4AF37"/><circle cx="342.6" cy="448.9" r="1.8" fill="#D4AF37"/><circle cx="329.5" cy="449.2" r="1.8" fill="#D4AF37"/><circle cx="347.2" cy="542.3" r="1.8" fill="#D4AF37"/><circle cx="356.3" cy="431.1" r="1.8" fill="#D4AF37"/><circle cx="404.9" cy="452" r="1.8" fill="#D4AF37"/>
+  <!-- front pleats -->
+  <path d="M378 404 L366 728 M392 404 L386 728 M406 404 L406 728 M420 404 L426 728" stroke="#4E1C24" stroke-width="2" opacity=".55"/>
+  <path d="M371 404 L356 728" stroke="#D4AF37" stroke-width="2"/>
+  <!-- feet -->
+  <ellipse cx="362" cy="748" rx="16" ry="6" fill="#4E1C24"/>
+  <ellipse cx="412" cy="748" rx="16" ry="6" fill="#4E1C24"/>
+  <!-- pallu drape behind left shoulder -->
+  <path d="M420 254 C448 300 462 380 470 440 L452 446 C444 380 430 320 404 268 Z" fill="#722F37" stroke="#D4AF37" stroke-width="3"/>
+  <!-- blouse -->
+  <path d="M352 252 L418 252 L426 362 L344 362 Z" fill="#722F37"/>
+  <circle cx="394.9" cy="349.3" r="1.5" fill="#D4AF37"/><circle cx="371.6" cy="293.3" r="1.5" fill="#D4AF37"/><circle cx="367.1" cy="339.2" r="1.5" fill="#D4AF37"/><circle cx="364.9" cy="308.9" r="1.5" fill="#D4AF37"/><circle cx="405" cy="309.7" r="1.5" fill="#D4AF37"/><circle cx="392.8" cy="345" r="1.5" fill="#D4AF37"/><circle cx="414.9" cy="322.3" r="1.5" fill="#D4AF37"/><circle cx="371.7" cy="317.7" r="1.5" fill="#D4AF37"/><circle cx="381.3" cy="326.9" r="1.5" fill="#D4AF37"/><circle cx="369" cy="342.9" r="1.5" fill="#D4AF37"/><circle cx="359.8" cy="340.6" r="1.5" fill="#D4AF37"/><circle cx="354.6" cy="308.1" r="1.5" fill="#D4AF37"/><circle cx="381.1" cy="323.9" r="1.5" fill="#D4AF37"/><circle cx="391.2" cy="331.8" r="1.5" fill="#D4AF37"/><circle cx="400.5" cy="312" r="1.5" fill="#D4AF37"/><circle cx="407.3" cy="288.7" r="1.5" fill="#D4AF37"/><circle cx="356.1" cy="314.5" r="1.5" fill="#D4AF37"/><circle cx="409.2" cy="291.9" r="1.5" fill="#D4AF37"/><circle cx="403.5" cy="330.6" r="1.5" fill="#D4AF37"/><circle cx="408.4" cy="312.2" r="1.5" fill="#D4AF37"/><circle cx="402.6" cy="341.2" r="1.5" fill="#D4AF37"/><circle cx="391.8" cy="333" r="1.5" fill="#D4AF37"/>
+  <!-- left arm with bangles -->
+  <path d="M430 266 C446 300 450 350 446 392 L428 392 C430 352 424 310 410 280 Z" fill="#B97A56"/>
+  <path d="M427 374 L447 374 M427 380 L447 380 M427 386 L447 386" stroke="#D4AF37" stroke-width="3"/>
+  <ellipse cx="438" cy="402" rx="10" ry="13" fill="#B97A56"/>
+  <!-- pota frill around waist -->
+  <path d="M326 404 Q336 384 346 404 Q356 384 366 404 Q376 384 386 404 Q396 384 406 404 Q416 384 426 404 Q436 384 446 404 L436 362 L336 362 Z" fill="#FBF6EC" stroke="#D4AF37" stroke-width="2"/>
+  <path d="M338 376 L434 376" stroke="#D4AF37" stroke-width="1.5"/>
+  <circle cx="346" cy="388" r="2" fill="#722F37"/><circle cx="366" cy="388" r="2" fill="#722F37"/><circle cx="386" cy="388" r="2" fill="#722F37"/><circle cx="406" cy="388" r="2" fill="#722F37"/><circle cx="426" cy="388" r="2" fill="#722F37"/>
+  <!-- right arm reaching to groom -->
+  <path d="M340 270 C322 304 314 360 314 410 L332 410 C334 362 342 318 358 286 Z" fill="#B97A56"/>
+  <path d="M313 392 L333 392 M313 398 L333 398" stroke="#D4AF37" stroke-width="3"/>
+  <!-- puffed sleeves -->
+  <ellipse cx="346" cy="268" rx="22" ry="19" fill="#722F37" stroke="#D4AF37" stroke-width="2"/>
+  <ellipse cx="424" cy="268" rx="22" ry="19" fill="#722F37" stroke="#D4AF37" stroke-width="2"/>
+  <path d="M326 278 C340 288 352 288 366 278 M404 278 C418 288 430 288 444 278" stroke="#D4AF37" stroke-width="2" fill="none"/>
+  <!-- neck -->
+  <rect x="374" y="222" width="22" height="34" fill="#9E6444"/>
+  <path d="M356 252 C370 268 400 268 414 252 L410 250 C396 262 374 262 360 250 Z" fill="#B97A56"/>
+  <!-- seven tier Kandyan necklaces -->
+  <path d="M365 252 Q385 266 405 252" stroke="#D4AF37" stroke-width="2.2" fill="none"/><path d="M361 260 Q385 281 409 260" stroke="#B08A1E" stroke-width="2.2" fill="none"/><path d="M357 268 Q385 296 413 268" stroke="#D4AF37" stroke-width="2.2" fill="none"/><path d="M353 276 Q385 311 417 276" stroke="#B08A1E" stroke-width="2.2" fill="none"/><path d="M349 284 Q385 326 421 284" stroke="#D4AF37" stroke-width="2.2" fill="none"/><path d="M345 292 Q385 341 425 292" stroke="#B08A1E" stroke-width="2.2" fill="none"/><path d="M341 300 Q385 356 429 300" stroke="#D4AF37" stroke-width="3.5" fill="none"/>
+  <circle cx="385" cy="306" r="6" fill="#D4AF37" stroke="#B08A1E"/>
+  <circle cx="385" cy="306" r="2.5" fill="#097969"/>
+  <!-- head -->
+  <circle cx="414" cy="160" r="27" fill="#2A1A14"/>
+  <circle cx="398" cy="140" r="5" fill="#FFFDF5"/><circle cx="408" cy="134" r="5" fill="#FFFDF5"/><circle cx="420" cy="134" r="5" fill="#FFFDF5"/><circle cx="430" cy="142" r="5" fill="#FFFDF5"/><circle cx="436" cy="154" r="5" fill="#FFFDF5"/><circle cx="438" cy="166" r="5" fill="#FFFDF5"/><circle cx="434" cy="178" r="5" fill="#FFFDF5"/><circle cx="426" cy="186" r="5" fill="#FFFDF5"/>
+  <circle cx="398" cy="140" r="1.6" fill="#D4AF37"/><circle cx="408" cy="134" r="1.6" fill="#D4AF37"/><circle cx="420" cy="134" r="1.6" fill="#D4AF37"/><circle cx="430" cy="142" r="1.6" fill="#D4AF37"/><circle cx="436" cy="154" r="1.6" fill="#D4AF37"/><circle cx="438" cy="166" r="1.6" fill="#D4AF37"/><circle cx="434" cy="178" r="1.6" fill="#D4AF37"/><circle cx="426" cy="186" r="1.6" fill="#D4AF37"/>
+  <ellipse cx="385" cy="190" rx="31" ry="38" fill="#B97A56"/>
+  <path d="M354 186 C352 158 368 148 385 148 C404 148 418 158 416 186 C410 168 398 162 385 162 C372 162 360 168 354 186 Z" fill="#2A1A14"/>
+  <path d="M355 182 C352 196 354 208 360 216 L356 184 Z M415 182 C418 196 416 208 410 216 L414 184 Z" fill="#2A1A14"/>
+  <!-- nalal patiya head jewellery -->
+  <path d="M358 170 Q385 156 412 170" stroke="#D4AF37" stroke-width="3" fill="none"/>
+  <path d="M385 148 L385 166" stroke="#D4AF37" stroke-width="2"/>
+  <circle cx="385" cy="170" r="4.5" fill="#D4AF37" stroke="#B08A1E"/>
+  <circle cx="385" cy="170" r="1.8" fill="#722F37"/>
+  <!-- earrings -->
+  <circle cx="355" cy="204" r="4" fill="#D4AF37"/><path d="M351 208 L355 220 L359 208 Z" fill="#D4AF37"/>
+  <circle cx="415" cy="204" r="4" fill="#D4AF37"/><path d="M411 208 L415 220 L419 208 Z" fill="#D4AF37"/>
+</g>
+<g id="hands">
+  <ellipse cx="310" cy="424" rx="16" ry="13" fill="#B97A56"/>
+  <ellipse cx="300" cy="420" rx="11" ry="10" fill="#9E6444"/>
+  <path d="M296 428 C304 440 318 440 326 428" stroke="#FFFDF5" stroke-width="3" fill="none" stroke-dasharray="3 2"/>
+</g></g>
+
+<g transform="translate(70 770) scale(1)" opacity=".9">
+  <path d="M0 0 C-14 -20 -10 -44 0 -56 C10 -44 14 -20 0 0 Z" fill="#FBF6EC" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M0 0 C-24 -10 -36 -32 -34 -46 C-18 -40 -6 -24 0 0 Z" fill="#FBF6EC" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M0 0 C24 -10 36 -32 34 -46 C18 -40 6 -24 0 0 Z" fill="#FBF6EC" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M-40 2 C-20 8 20 8 40 2" stroke="#D4AF37" stroke-width="2" fill="none"/>
+</g>
+<g transform="translate(530 770) scale(1)" opacity=".9">
+  <path d="M0 0 C-14 -20 -10 -44 0 -56 C10 -44 14 -20 0 0 Z" fill="#FBF6EC" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M0 0 C-24 -10 -36 -32 -34 -46 C-18 -40 -6 -24 0 0 Z" fill="#FBF6EC" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M0 0 C24 -10 36 -32 34 -46 C18 -40 6 -24 0 0 Z" fill="#FBF6EC" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M-40 2 C-20 8 20 8 40 2" stroke="#D4AF37" stroke-width="2" fill="none"/>
+</g>
+</svg>

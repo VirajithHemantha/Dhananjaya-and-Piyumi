@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { CheckCircle, Loader2, Heart, Sparkles } from 'lucide-react';
+import { postToSheet } from '../config';
 
 export const RSVPForm: React.FC = () => {
   const [formData, setFormData] = useState({
     fullName: '',
+    attendance: 'Yes',
     guests: '1',
     dietaryNotes: '',
   });
@@ -15,22 +17,15 @@ export const RSVPForm: React.FC = () => {
     setStatus('loading');
 
     try {
-      const scriptUrl = 'https://script.google.com/macros/s/AKfycbyay20jbF63BRUj8JGGbUbYkYS3Us-DpLZc2Hs34si_qKJgxs_81xpNBniXsBNFsYOt7g/exec';
-      const payload = new FormData();
-      payload.append('sheet', 'RSVP');
-      payload.append('name', formData.fullName);
-      payload.append('guests', formData.guests);
-      payload.append('dietary', formData.dietaryNotes);
-      payload.append('attendance', 'Yes');
-
-      await fetch(scriptUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: payload,
+      await postToSheet('RSVP', {
+        name: formData.fullName,
+        attendance: formData.attendance,
+        guests: formData.attendance === 'Yes' ? formData.guests : '0',
+        dietary: formData.dietaryNotes,
       });
 
       setStatus('success');
-      setFormData({ fullName: '', guests: '1', dietaryNotes: '' });
+      setFormData({ fullName: '', attendance: 'Yes', guests: '1', dietaryNotes: '' });
     } catch (error) {
       console.error('Error sending RSVP: ', error);
       setStatus('error');
@@ -121,6 +116,27 @@ export const RSVPForm: React.FC = () => {
                 </div>
 
                 <div>
+                  <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Will You Attend?</label>
+                  <div className="grid grid-cols-2 gap-3">
+                    {[['Yes', 'Joyfully Accept'], ['No', 'Regretfully Decline']].map(([value, label]) => (
+                      <button
+                        key={value}
+                        type="button"
+                        onClick={() => setFormData({ ...formData, attendance: value })}
+                        className={`px-4 py-4 rounded-full border font-serif italic text-base sm:text-lg transition-all duration-300 ${
+                          formData.attendance === value
+                            ? 'bg-stone-800 text-brand-champagne border-stone-800 shadow-md'
+                            : 'bg-white/80 text-stone-700 border-stone-200/60 hover:border-brand-beige-deep/40'
+                        }`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {formData.attendance === 'Yes' && (
+                <div>
                   <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Number of Guests</label>
                   <div className="relative group">
                     <select
@@ -138,6 +154,7 @@ export const RSVPForm: React.FC = () => {
                     </div>
                   </div>
                 </div>
+                )}
 
                 <div>
                   <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Dietary Notes (Optional)</label>
@@ -148,6 +165,12 @@ export const RSVPForm: React.FC = () => {
                     onChange={(e) => setFormData({ ...formData, dietaryNotes: e.target.value })}
                   />
                 </div>
+
+                {status === 'error' && (
+                  <p className="text-center text-sm font-serif italic text-red-700">
+                    Sorry, we couldn't send your response. Please try again.
+                  </p>
+                )}
 
                 <div className="pt-4">
                   <button
